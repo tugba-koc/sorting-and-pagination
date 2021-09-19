@@ -51,9 +51,11 @@ function Sort() {
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   // resfresh site
-  const refresh =()=>{
-    window.location.reload()
-  }
+  const refresh = () => {
+    window.location.reload();
+  };
+
+  console.log(lastSearches);
 
   return (
     <div className="container sort-wrapper">
@@ -67,16 +69,23 @@ function Sort() {
         <div className="sort-input-area col-8">
           <div className="form-group input-group ">
             <input
-              className="input"
+              list="datalistOptions"
+              className="input form-control"
               onChange={onChangeHandler}
               type="search"
               name="text"
-              id="text"
               value={text}
               placeholder="Search something!"
             />
+            {/* last text values */}
+            <datalist id="datalistOptions">
+              {lastSearches.map((item, index) => {
+                return <option key={index} value={item} />;
+              })}
+            </datalist>
             <BsSearch className="icon" />
           </div>
+
           <button onClick={showResults} className="button">
             SEARCH
           </button>
@@ -111,8 +120,8 @@ function Sort() {
                 <BiErrorCircle className="error-icon " />
               </div>{" "}
               <div className="error-explain">
-              No results were found for your search   <span>"{lastSearches[lastSearches.length - 1]}"</span>.
-                
+                No results were found for your search{" "}
+                <span>"{lastSearches[lastSearches.length - 1]}"</span>.
               </div>
             </div>
           ) : null}

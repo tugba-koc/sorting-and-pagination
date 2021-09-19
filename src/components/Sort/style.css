@@ -63,7 +63,7 @@
   align-items: center;
 }
 
-.input {
+.input.form-control {
   border: 0.5px solid #919191;
   border-right: 0;
   border-bottom-left-radius: 10px;
@@ -149,4 +149,13 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .filtered-part {
   width: 80%;
+}
+
+
+.input::-webkit-calendar-picker-indicator {
+  display:none !important;
+}
+
+datalist {
+  width: 300px
 }
