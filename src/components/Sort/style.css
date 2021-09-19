@@ -77,6 +77,8 @@
   line-height: 1.2em;
   letter-spacing: 1px;
   opacity: 0.8;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 input[type="search"] {
@@ -152,11 +154,10 @@ input[type="search"]::-webkit-search-cancel-button {
   width: 80%;
 }
 
-
 .input::-webkit-calendar-picker-indicator {
-  display:none !important;
+  display: none !important;
 }
 
 datalist {
-  width: 300px
+  width: 300px;
 }

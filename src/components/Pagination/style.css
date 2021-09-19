@@ -1,11 +1,11 @@
-a.page-link {
+button.page-link {
   color: orange;
 }
 
-a.page-link:hover {
+button.page-link:hover {
   color: orange;
 }
 
-a.page-link:active {
+button.page-link:active {
   color: orange;
 }

@@ -20,8 +20,8 @@ function Sort() {
 
   // mounting api data when starting
   useEffect(() => {
-    axios(services.apiUrl).then((res) => setList(res.data.slice(0,100)));
-    setLoading(false)
+    axios(services.apiUrl).then((res) => setList(res.data.slice(0, 100)));
+    setLoading(false);
   }, []);
 
   const onChangeHandler = (e) => {
@@ -101,7 +101,7 @@ function Sort() {
           {(!text.length || text.length) && !activeControl ? (
             list.map((item) => (
               <FilteredItem
-              loading={loading}
+                loading={loading}
                 text={text}
                 filteredList={filteredList}
                 key={item.id}
@@ -111,7 +111,7 @@ function Sort() {
           ) : filteredList.length ? (
             currentCards.map((item) => (
               <FilteredItem
-              loading={loading}
+                loading={loading}
                 text={text}
                 filteredList={filteredList}
                 key={item.id}
