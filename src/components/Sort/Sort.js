@@ -50,17 +50,22 @@ function Sort() {
   // change page
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
+  // resfresh site
+  const refresh =()=>{
+    window.location.reload()
+  }
+
   return (
     <div className="container sort-wrapper">
       <div className="row sort-main">
-        <div className="logo col-2">
+        <div onClick={refresh} className="logo col-2">
           <span>
             <TiArrowUnsorted className="logo-icon" />
-            SORT IT!
+            SORT!
           </span>
         </div>
         <div className="sort-input-area col-8">
-          <div className="form-group input-group col-6">
+          <div className="form-group input-group ">
             <input
               className="input"
               onChange={onChangeHandler}
@@ -106,8 +111,8 @@ function Sort() {
                 <BiErrorCircle className="error-icon " />
               </div>{" "}
               <div className="error-explain">
-                <span>"{lastSearches[lastSearches.length - 1]}"</span> ile
-                ilgili sonuç bulunamamıştır.
+              No results were found for your search   <span>"{lastSearches[lastSearches.length - 1]}"</span>.
+                
               </div>
             </div>
           ) : null}

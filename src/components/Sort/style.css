@@ -15,7 +15,7 @@
 }
 
 .logo {
-  width: 100px;
+  min-width: 130px;
   display: flex;
   align-items: center;
   height: 100%;
@@ -55,12 +55,10 @@
 .sort-input-area {
   display: flex;
   justify-content: center;
-  width: 100%;
 }
 
 .form-group {
   position: relative;
-  width: 100%;
   display: flex;
   align-items: center;
 }
